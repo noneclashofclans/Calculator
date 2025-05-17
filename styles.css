@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(60deg, #0a0a0a, #555353);
+}
+
+.calculator {
+    border: 1px solid whitesmoke;
+    padding: 3.3em;
+    border-radius: 79px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+
+input {
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    margin: 10px;          
+    background: transparent;
+    font-size: 40px;
+    text-align: right;
+    color: white;
+    width: 300px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.btnClass {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+.btnClass button {
+    font-weight: 600;
+    padding: 20px;
+    border: none;
+    border-radius: 90%;
+    font-size: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.btnClass button.eb{
+    background-color: rgb(248, 178, 3);
+    color: black !important;
+}
+
+.btnClass button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}  
+
+.btnClass button.opert{
+    color: rgb(63, 237, 0) !important;
+}
+/* 
+For Phones */
+
+@media screen and (max-width: 600px) {
+    .calculator {
+        padding: 2rem;
+        border-radius: 30px;
+    }
+
+    input {
+        font-size: 28px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnClass {
+        grid-template-columns: repeat(4, 50px);
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
+
